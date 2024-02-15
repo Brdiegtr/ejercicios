@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>diego</title>
+</head>
+<body>
+
+<label for="nombre">Ingresa tu nombre: </label>
+<input type="text" id="nombreInput">
+<button onclick="saludar()">Saludar</button>
+
+<p id="saludo"></p>
+
+<script>
+function saludar() {
+  var nombre = document.getElementById("nombreInput").value;
+  var saludo = "¡Bienvenido, " + nombre +"diego es la paypa"+ "!";
+  document.getElementById("saludo").innerText = saludo;
+}
+</script>
+
+</body>
+</html>

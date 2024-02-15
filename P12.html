@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Índice de Masa Corporal</title>
+</head>
+<body>
+
+<div class="calculator">
+    <h2>Calculadora de Índice de Masa Corporal</h2>
+    <label for="peso">Peso (kg):</label>
+    <input type="number" id="pesoInput">
+    <br>
+    <label for="altura">Altura (m):</label>
+    <input type="number" id="alturaInput">
+    <br>
+    <button onclick="calcularIMC()">Calcular</button><br>
+    <p id="resultado"></p>
+</div>
+
+<script>
+    function calcularIMC() {
+    var peso = parseFloat(document.getElementById("pesoInput").value);
+    var altura = parseFloat(document.getElementById("alturaInput").value);
+    
+    if (isNaN(peso) || isNaN(altura) || peso <= 0 || altura <= 0) {
+        document.getElementById("resultado").innerText = "Por favor, ingrese valores válidos para peso y altura.";
+    } else {
+        var imc = peso / (altura * altura);
+        document.getElementById("resultado").innerText = "Su Índice de Masa Corporal (IMC) es: " + imc.toFixed(2);
+    }
+}
+
+</script>
+
+</body>
+</html>

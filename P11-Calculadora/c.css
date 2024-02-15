@@ -1,0 +1,36 @@
+.calculator {
+    width: 250px;
+    border: 1px solid #000000;
+    background-color: #00a0f7;
+    padding: 10px;
+    margin: 0 auto;
+    text-align: center;
+}
+.calculator input[type="button"] {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    font-size: 28px;
+}
+.result {
+    margin-top: 10px;
+    font-size: 24px;
+}
+#pepe{
+    background-color: #ff0000;
+    color: rgb(255, 255, 255);
+}
+.diego{
+    background-color: #f3efef;
+    width: 200px;
+    height: 50px;
+}
+#pobres{
+    background-color: red;
+    color: white;
+}
+input{
+    background-color: #a2a2a2;
+    color: white;
+    text-align: center;
+}

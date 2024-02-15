@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Números primos en un rango</title>
+</head>
+<body>
+
+<h2>Números primos en un rango</h2>
+
+<label for="inicio">Primer numero del rango:</label>
+<input type="number" id="inicioInput">
+<br>
+<label for="fin">Ultimo numero del rango:</label>
+<input type="number" id="finInput">
+
+<button onclick="encontrarPrimos()">Encontrar primos</button>
+
+<p id="resultado"></p>
+
+<script>
+function esPrimo(numero) {
+  if (numero <= 1) {
+    return false;
+  }
+  for (var i = 2; i <= Math.sqrt(numero); i++) {
+    if (numero % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function encontrarPrimos() {
+  var inicio = parseInt(document.getElementById("inicioInput").value);
+  var fin = parseInt(document.getElementById("finInput").value);
+  var primos = [];
+
+  for (var i = inicio; i <= fin; i++) {
+    if (esPrimo(i)) {
+      primos.push(i);
+    }
+  }
+
+  if (primos.length === 0) {
+    document.getElementById("resultado").innerText = "No se encontraron números primos en este rango.";
+  } else {
+    document.getElementById("resultado").innerText = "Números primos en el rango: " + primos.join(", ");
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabla de multiplicar EL MAY</title>
+</head>
+<body>
+
+<h2>Tabla de multiplicar EL MAY</h2>
+
+<label for="numero">Ingrese un número: </label>
+<input type="number" id="numeroInput">
+<button onclick="generarTabla()">May</button>
+
+<!-- Aquí se generará la tabla -->
+<table id="tablaMultiplicar"></table>
+
+<script>
+function generarTabla() {
+  var numero = parseInt(document.getElementById("numeroInput").value);
+  var tablaHTML = "<tr><th>Factor</th><th>Resultado</th></tr>";
+
+  for (var i = 1; i <= 10; i++) {
+    var resultado = numero * i;
+    //tr y td es para acomodar los numeros
+    tablaHTML += "<tr><td>" + numero + " x " + i+ " = " + "</td><td>" + resultado + "</td></tr>";
+  }
+
+  document.getElementById("tablaMultiplicar").innerHTML = tablaHTML;
+}
+</script>
+
+</body>
+</html>
